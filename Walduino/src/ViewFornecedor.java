@@ -1,5 +1,5 @@
 
-///
+/// fazeno coment√°rio no Git
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -44,7 +44,7 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 		super("Fornecedor");
         setLayout(new BorderLayout());
         //Vou criar um painel apenas para as labels
-        //e os campos do formul·rio
+        //e os campos do formul√°rio
         painelFormulario = new JPanel();
         painelFormulario.setLayout(new GridLayout(7, 2));
         
@@ -63,7 +63,7 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 		txtNomeFantasia=new JTextField(10);
 		painelFormulario.add(txtNomeFantasia);
 		
-		lblTelefone = new JLabel("Telefone N∫: ");
+		lblTelefone = new JLabel("Telefone N¬∫: ");
 		painelFormulario.add(lblTelefone);
 		txtTelefone =new JTextField(10);
 		painelFormulario.add(txtTelefone);
@@ -80,7 +80,7 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 		
 		
 		
-		// Aqui vou criar o painel e colocar os botıes nele 
+		// Aqui vou criar o painel e colocar os bot√µes nele 
 		painelBotoes = new JPanel();
 		painelBotoes.setLayout(new FlowLayout());
 		
@@ -119,8 +119,8 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 		                && ( event.getSource()== btnOk ) ) {
 		JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
 		} else {
-		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a operaÁ„o!!");
-		            JOptionPane.showMessageDialog(null, "Confira os campos ObrigatÛrios!!");
+		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a opera√ß√£o!!");
+		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigat√≥rios!!");
 		            
 		}}
 	

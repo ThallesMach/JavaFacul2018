@@ -1,6 +1,5 @@
 
-/// fazeno comentário no Git
-/// alterador no Eclipse
+//// Alterado pelo Git
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;

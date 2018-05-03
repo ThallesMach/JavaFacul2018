@@ -1,4 +1,7 @@
 
+
+//// ok
+
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -16,25 +19,25 @@ public class MisturaTudo extends JFrame {
 	private JButton btn3;
 	private JButton btn4;
 	
-	private JPanel painelBotıes;
+	private JPanel painelBot√µes;
 	
 	public MisturaTudo() {
 		super("Mais de um gerenciador! ");
 		
-		painelBotıes = new JPanel();
-		painelBotıes.setLayout(new FlowLayout() );
+		painelBot√µes = new JPanel();
+		painelBot√µes.setLayout(new FlowLayout() );
 		
 		btn1 = new JButton("A");
-		painelBotıes.add(btn1);
+		painelBot√µes.add(btn1);
 		btn2 = new JButton("B");
-		painelBotıes.add(btn2);
+		painelBot√µes.add(btn2);
 		btn3 = new JButton("C");
-		painelBotıes.add(btn3);
+		painelBot√µes.add(btn3);
 		btn4 = new JButton("D");
-		painelBotıes.add(btn4);
+		painelBot√µes.add(btn4);
 		
 		setLayout(new BorderLayout());
-		add(painelBotıes, BorderLayout.SOUTH);
+		add(painelBot√µes, BorderLayout.SOUTH);
 		
 	}
 	

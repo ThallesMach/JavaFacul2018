@@ -2,31 +2,32 @@
 //// Alterado pelo Git
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.FlowLayout; //gerenciador de layout que especifica como os componentes serão exibidos na Janela.
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JFrame; //recursos básicos de janela
+import javax.swing.JLabel; //para exibição de texto e/ou imagem
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.JTextField; //campo de Texto
 
 
 public class ViewFornecedor extends JFrame implements ActionListener{
 	
 	
-	private JLabel lblId;
-	private JLabel lblRazaoSocial;
-	private JLabel lblNomeFantasia;
+	
+	private JLabel lblId;	//JLabel que usamos para textos 
+	private JLabel lblRazaoSocial; //JLabel que usamos para textos
+	private JLabel lblNomeFantasia; //JLabel que usamos para textos
 	private JLabel lblTelefone;
 	private JLabel lblEmail;
 	private JLabel lblEndereco;
-	private JTextField txtId;
-	private JTextField txtRazaoSocial;
-	private JTextField txtNomeFantasia;
+	private JTextField txtId;	// JTextField onde poderá digitar o id.
+	private JTextField txtRazaoSocial;	// JTextField onde poderá digitar RazãoSocial
+	private JTextField txtNomeFantasia; // JTextField onde poderá digitar NomeFantasia
 	private JTextField txtTelefone;
 	private JTextField txtEmail;
 	private JTextField txtEndereco;
@@ -124,6 +125,7 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 		            
 		}}
 	
+	//Na main vamos instanciar a janela e exibir na tela
 	public static void main(String[] args) {
 		ViewFornecedor janelinha = new ViewFornecedor();//criando a janela
         janelinha.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

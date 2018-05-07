@@ -2,13 +2,13 @@
 
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.FlowLayout; //gerenciador de layout que especifica como os componentes serÃ£o exibidos na Janela.
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JFrame; //recursos bÃ¡sicos de janela
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -61,7 +61,7 @@ public class ViewCliente extends JFrame implements ActionListener{
 		txtLogradouro=new JTextField(10);
 		painelFormulario.add(txtLogradouro);
 		
-		lblNumero = new JLabel("Nº: ");
+		lblNumero = new JLabel("Nï¿½: ");
 		painelFormulario.add(lblNumero);
 		txtNumero=new JTextField(10);
 		painelFormulario.add(txtNumero);
@@ -81,7 +81,7 @@ public class ViewCliente extends JFrame implements ActionListener{
 		txtCpf=new JTextField(10);
 		painelFormulario.add(txtCpf);
 		
-		// Aqui vou criar o painel e colocar os botões nele 
+		// Aqui vou criar o painel e colocar os botï¿½es nele 
 		painelBotoes = new JPanel();
 		painelBotoes.setLayout(new FlowLayout());
 		
@@ -133,8 +133,8 @@ public class ViewCliente extends JFrame implements ActionListener{
 		&& ( event.getSource()== btnOk ) ) {
 		JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
 		} else {
-		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a operação!!");
-		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigatórios!!");
+		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a operaï¿½ï¿½o!!");
+		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigatï¿½rios!!");
 		            
 		}}
 	

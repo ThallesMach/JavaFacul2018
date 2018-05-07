@@ -2,9 +2,9 @@
 
 //// ok
 
-import javax.swing.JFrame;
+import javax.swing.JFrame;  //recursos básicos de janela
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.FlowLayout; //gerenciador de layout que especifica como os componentes serão exibidos na Janela.
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;

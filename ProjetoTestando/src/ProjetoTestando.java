@@ -7,7 +7,7 @@ public class ProjetoTestando {
 		
 		System.out.println(" Tudo ok ");
 		
-		System.out.println("Testando no Novo Eclipse Phton ");
+		System.out.println("Testando no Novo -->> Eclipse Photon <<-- ");
 		//Teste recebido no Github
 	}
 

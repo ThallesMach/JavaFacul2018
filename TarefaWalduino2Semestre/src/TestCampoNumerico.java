@@ -144,11 +144,11 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent event ) {
 
 		if ( ( txtId.getText().trim().length()>0)   // trim() == Tirando espaços em branco com metodo // e length() == Verifica se tem componente preenchido
-		                && (txtRazaoSocial.getText().length()> 0)
-		                && (txtNomeFantasia.getText().length() > 0)
-		                && (txtTelefone.getText().length() > 0)
-		                && (txtEmail.getText().length() > 0)
-		                && (txtEndereco.getText().length() > 0)
+		                && (txtRazaoSocial.getText().trim().length()> 0)
+		                && (txtNomeFantasia.getText().trim().equals("") )
+		                && (txtTelefone.getText().trim().length() > 0)
+		                && (txtEmail.getText().trim().length() > 0)
+		                && (txtEndereco.getText().trim().equals("") )
 		                && ( event.getSource()== btnOk ) ) {
 		JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
 		} else {

@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame; //recursos básicos de janela
-import javax.swing.JLabel; //para exibição de texto e/ou imagem
+import javax.swing.JLabel; //para exibito de texto e/ou imagem
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField; //campo de Texto
@@ -25,9 +25,9 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 	private JLabel lblTelefone;
 	private JLabel lblEmail;
 	private JLabel lblEndereco;
-	private JTextField txtId;	// JTextField onde poderá digitar o id.
-	private JTextField txtRazaoSocial;	// JTextField onde poderá digitar RazãoSocial
-	private JTextField txtNomeFantasia; // JTextField onde poderá digitar NomeFantasia
+	private JTextField txtId;	// JTextField onde poderÃ¡ digitar o id.
+	private JTextField txtRazaoSocial;	// JTextField onde poderÃ¡ digitar RazÃ£oSocial
+	private JTextField txtNomeFantasia; // JTextField onde poderÃ¡ digitar NomeFantasia
 	private JTextField txtTelefone;
 	private JTextField txtEmail;
 	private JTextField txtEndereco;
@@ -45,7 +45,7 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 		super("Fornecedor");
         setLayout(new BorderLayout());
         //Vou criar um painel apenas para as labels
-        //e os campos do formulário
+        //e os campos do formulÃ¡rio
         painelFormulario = new JPanel();
         painelFormulario.setLayout(new GridLayout(7, 2));
         
@@ -81,7 +81,7 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 		
 		
 		
-		// Aqui vou criar o painel e colocar os botões nele 
+		// Aqui vou criar o painel e colocar os botôes nele 
 		painelBotoes = new JPanel();
 		painelBotoes.setLayout(new FlowLayout());
 		
@@ -111,7 +111,7 @@ public class ViewFornecedor extends JFrame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent event ) {
 
-		if ( ( txtId.getText().trim().length()>0)   // trim() == Tirando espa�os em branco com metodo // e length() == Verifica se tem componente preenchido
+		if ( ( txtId.getText().trim().length()>0)   // trim() == Tirando espaços em branco com metodo // e length() == Verifica se tem componente preenchido
 		                &&(txtRazaoSocial.getText().trim().length()> 0)
 		                && (txtNomeFantasia.getText().trim().length() > 0)
 		                && (txtTelefone.getText().trim().length() > 0)

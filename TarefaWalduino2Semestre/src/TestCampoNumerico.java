@@ -3,7 +3,7 @@
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.FlowLayout; //gerenciador de layout que especifica como os componentes ser�o exibidos na Janela.
+import java.awt.FlowLayout; //gerenciador de layout que especifica como os componentes serão exibidos na Janela.
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,8 +11,8 @@ import java.text.ParseException;
 
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
-import javax.swing.JFrame; //recursos b�sicos de janela
-import javax.swing.JLabel; //para exibi��o de texto e/ou imagem
+import javax.swing.JFrame; //recursos básicos de janela
+import javax.swing.JLabel; //para exibir de texto e/ou imagem
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField; //campo de Texto
@@ -53,7 +53,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 
         
         //Vou criar um painel apenas para as labels
-        //e os campos do formul�rio
+        //e os campos do formulário
         painelFormulario = new JPanel();
         painelFormulario.setLayout(new GridLayout(7, 2));
         
@@ -73,13 +73,13 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 		painelFormulario.add(txtNomeFantasia);
 		
 //		-------------------------------------------------------------------------------
-		lblTelefone = new JLabel("Telefone N�: ");
+		lblTelefone = new JLabel("Telefone Nº: ");
 		lblTelefone.setBounds(50,80,100,20);
-//		lblTelefone = new JLabel("Telefone N�: ");
+//		lblTelefone = new JLabel("Telefone Nº: ");
 		painelFormulario.add(lblTelefone);
 //		txtTelefone =new JTextField(10);
 
-        //Define as m�scaras
+        //Define as máscaras
         MaskFormatter mascaraTel = null;
 
         try{
@@ -87,7 +87,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
                mascaraTel.setPlaceholderCharacter('_');
         }
         catch(ParseException excp) {
-               System.err.println("Erro na formata��o: " + excp.getMessage());
+               System.err.println("Erro na formatação: " + excp.getMessage());
                System.exit(-1);
         }
 
@@ -112,7 +112,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 		
 		
 		
-		// Aqui vou criar o painel e colocar os bot�es nele 
+		// Aqui vou criar o painel e colocar os botões nele 
 		painelBotoes = new JPanel();
 		painelBotoes.setLayout(new FlowLayout());
 		
@@ -142,7 +142,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent event ) {
 
-		if ( ( txtId.getText().trim().length()>0)   // trim() == Tirando espa�os em branco com metodo // e length() == Verifica se tem componente preenchido
+		if ( ( txtId.getText().trim().length()>0)   // trim() == Tirando espaços em branco com metodo // e length() == Verifica se tem componente preenchido
 		                && (txtRazaoSocial.getText().trim().length()> 0)
 		                && (txtNomeFantasia.getText().trim().equals("") )
 		                && (txtTelefone.getText().trim().length() > 0)
@@ -152,7 +152,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 		JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
 		} else {
 		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a operação!!", "Aviso",JOptionPane.ERROR_MESSAGE);
-		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigat�rios!!", "Aviso",JOptionPane.WARNING_MESSAGE);
+		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigatórios!!", "Aviso",JOptionPane.WARNING_MESSAGE);
 		            
 		}}
 	

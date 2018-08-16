@@ -3,8 +3,7 @@
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.Container;
-import java.awt.FlowLayout; //gerenciador de layout que especifica como os componentes serão exibidos na Janela.
+import java.awt.FlowLayout; //gerenciador de layout que especifica como os componentes serï¿½o exibidos na Janela.
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,8 +11,8 @@ import java.text.ParseException;
 
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
-import javax.swing.JFrame; //recursos básicos de janela
-import javax.swing.JLabel; //para exibição de texto e/ou imagem
+import javax.swing.JFrame; //recursos bï¿½sicos de janela
+import javax.swing.JLabel; //para exibiï¿½ï¿½o de texto e/ou imagem
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField; //campo de Texto
@@ -31,9 +30,9 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 	private JLabel lblTelefone;
 	private JLabel lblEmail;
 	private JLabel lblEndereco;
-	private JTextField txtId;	// JTextField onde poderá digitar o id.
-	private JTextField txtRazaoSocial;	// JTextField onde poderá digitar RazãoSocial
-	private JTextField txtNomeFantasia; // JTextField onde poderá digitar NomeFantasia
+	private JTextField txtId;	// JTextField onde poderï¿½ digitar o id.
+	private JTextField txtRazaoSocial;	// JTextField onde poderï¿½ digitar Razï¿½oSocial
+	private JTextField txtNomeFantasia; // JTextField onde poderï¿½ digitar NomeFantasia
 	private JTextField txtTelefone;
 	private JTextField txtEmail;
 	private JTextField txtEndereco;
@@ -54,7 +53,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 
         
         //Vou criar um painel apenas para as labels
-        //e os campos do formulário
+        //e os campos do formulï¿½rio
         painelFormulario = new JPanel();
         painelFormulario.setLayout(new GridLayout(7, 2));
         
@@ -74,13 +73,13 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 		painelFormulario.add(txtNomeFantasia);
 		
 //		-------------------------------------------------------------------------------
-		lblTelefone = new JLabel("Telefone Nº: ");
+		lblTelefone = new JLabel("Telefone Nï¿½: ");
 		lblTelefone.setBounds(50,80,100,20);
-//		lblTelefone = new JLabel("Telefone Nº: ");
+//		lblTelefone = new JLabel("Telefone Nï¿½: ");
 		painelFormulario.add(lblTelefone);
 //		txtTelefone =new JTextField(10);
 
-        //Define as máscaras
+        //Define as mï¿½scaras
         MaskFormatter mascaraTel = null;
 
         try{
@@ -88,7 +87,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
                mascaraTel.setPlaceholderCharacter('_');
         }
         catch(ParseException excp) {
-               System.err.println("Erro na formatação: " + excp.getMessage());
+               System.err.println("Erro na formataï¿½ï¿½o: " + excp.getMessage());
                System.exit(-1);
         }
 
@@ -113,7 +112,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 		
 		
 		
-		// Aqui vou criar o painel e colocar os botões nele 
+		// Aqui vou criar o painel e colocar os botï¿½es nele 
 		painelBotoes = new JPanel();
 		painelBotoes.setLayout(new FlowLayout());
 		
@@ -143,7 +142,7 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent event ) {
 
-		if ( ( txtId.getText().trim().length()>0)   // trim() == Tirando espaços em branco com metodo // e length() == Verifica se tem componente preenchido
+		if ( ( txtId.getText().trim().length()>0)   // trim() == Tirando espaï¿½os em branco com metodo // e length() == Verifica se tem componente preenchido
 		                && (txtRazaoSocial.getText().trim().length()> 0)
 		                && (txtNomeFantasia.getText().trim().equals("") )
 		                && (txtTelefone.getText().trim().length() > 0)
@@ -152,8 +151,8 @@ public class TestCampoNumerico extends JFrame implements ActionListener {
 		                && ( event.getSource()== btnOk ) ) {
 		JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
 		} else {
-		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a operação!!");
-		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigatórios!!");
+		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a operaÃ§Ã£o!!", "Aviso",JOptionPane.ERROR_MESSAGE);
+		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigatï¿½rios!!", "Aviso",JOptionPane.WARNING_MESSAGE);
 		            
 		}}
 	

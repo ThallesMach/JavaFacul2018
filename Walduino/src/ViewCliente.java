@@ -61,7 +61,7 @@ public class ViewCliente extends JFrame implements ActionListener{
 		txtLogradouro=new JTextField(10);
 		painelFormulario.add(txtLogradouro);
 		
-		lblNumero = new JLabel("N�: ");
+		lblNumero = new JLabel("Nº: ");
 		painelFormulario.add(lblNumero);
 		txtNumero=new JTextField(10);
 		painelFormulario.add(txtNumero);
@@ -81,7 +81,7 @@ public class ViewCliente extends JFrame implements ActionListener{
 		txtCpf=new JTextField(10);
 		painelFormulario.add(txtCpf);
 		
-		// Aqui vou criar o painel e colocar os bot�es nele 
+		// Aqui vou criar o painel e colocar os botões nele 
 		painelBotoes = new JPanel();
 		painelBotoes.setLayout(new FlowLayout());
 		
@@ -133,8 +133,8 @@ public class ViewCliente extends JFrame implements ActionListener{
 		&& ( event.getSource()== btnOk ) ) {
 		JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
 		} else {
-		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a opera��o!!");
-		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigat�rios!!");
+		JOptionPane.showMessageDialog(null, "Dados Validados aqui deve ser efetuada a operação!!");
+		            JOptionPane.showMessageDialog(null, "Confira os campos Obrigatórios!!");
 		            
 		}}
 	

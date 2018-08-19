@@ -1,5 +1,4 @@
 
-
 // https://www.devmedia.com.br/java-swing-conheca-os-componentes-jtextfield-e-jformattedtextfield/30981
 
 import java.awt.BorderLayout;
@@ -152,7 +151,7 @@ public class ViewClienteTeste extends JFrame implements ActionListener {
 		// }
 		
 		if ((txtId.getText().trim().length() > 0) // trim() == Tirando espaços em branco com metodo 
-													// e length() == Verifica se tem componente preenchido
+												// e length() == Verifica se tem componente preenchido
 				&& (txtNome.getText().trim().length() > 0) 
 				&& (txtLogradouro.getText().trim().length() > 0)
 				&& (txtNumero.getText().trim().length() > 0) 
@@ -175,8 +174,6 @@ public class ViewClienteTeste extends JFrame implements ActionListener {
 		janelinha.setSize(400, 250);
 		janelinha.setVisible(true);
 		
-		
-
 	}
 
 }

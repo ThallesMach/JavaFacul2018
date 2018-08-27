@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
 
-public class ViewClienteTeste3 extends JFrame implements ActionListener {
+public class ViewClienteVilidarCep extends JFrame implements ActionListener {
 	private JLabel lblId;
 	private JLabel lblNome;
 	private JLabel lblLogradouro;
@@ -41,7 +41,7 @@ public class ViewClienteTeste3 extends JFrame implements ActionListener {
 	private JPanel painelBotoes;
 	private JPanel painelFormulario;
 
-	public ViewClienteTeste3() {
+	public ViewClienteVilidarCep() {
 		super("Clientes");
 		setLayout(new BorderLayout());
 		//
@@ -162,24 +162,25 @@ public class ViewClienteTeste3 extends JFrame implements ActionListener {
 //		
 //		System.out.println("//////////////////////////////////////////");
 //		System.out.println( txtCep.getText().equals(" ")  );
-		
+		String a = txtCep.getText();
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 		System.out.println( "B	"+ txtCep.getText().equals(" ") +"	D" );
 		System.out.println("//////////////////////////////////////////");
 		System.out.println("---//---//---//---//---//---//---");
-		System.out.println( "_a"+  txtCep.getText()  +"A_"  );
+		System.out.println( "_a"+  a  +"A_"  );
 		System.out.println("-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-");
 		
-		if ( // ( txtId.getText().length() == 0 ) // trim() == Tirando espaços em branco com metodo 
-													// e length() == Verifica se tem componente preenchido
+		if ( //( txtId.getText().length() > 0 ) // trim() == Tirando espaços em branco com metodo 
+												// e length() == Verifica se tem componente preenchido
 				 (txtNome.getText().trim().length() > 0) 
 //				&& (txtLogradouro.getText().trim().length() > 0)
 //				&& (txtNumero.getText().trim().length() > 0) 
 //				&& (txtComplemento.getText().trim().length() > 0)
 				
-//				&& (txtCep.getText().equals(" ") )
+				&& (txtCep.getText().equals(" - ") )
 
 //				&& (txtCep.getText().trim().length() > 0 )      && (txtCpf.getText().trim().length() > 0)
+				
 				&& ( event.getSource()== btnOk ) ) {
 			
 			JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
@@ -193,28 +194,25 @@ public class ViewClienteTeste3 extends JFrame implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		ViewClienteTeste3 janelinha = new ViewClienteTeste3();// criando a janela
+		ViewClienteVilidarCep janelinha = new ViewClienteVilidarCep();// criando a janela
 		janelinha.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janelinha.setSize(400, 250);
 		janelinha.setVisible(true);
-		
-		
-
 	}
 
 }
 
-
-//&& (txtCep.getText().trim().length() !=0  )
-//&& (txtCep.getText().trim().length() > 0 ) 
+//		Tentativas feitas
+//	&& (txtCep.getText().trim().length() !=0  )
+//	&& (txtCep.getText().trim().length() > 0 ) 
 //
-//&& (txtCep.getText().trim().equals(null)   )
-//&& (txtCep.getText().trim().equals("")   )
-//&& (txtCep.getText().trim().equals("-")   )
-//&& (txtCep.getText().trim().equals("-")   )
-//&& (txtCep.getText().trim().equals("__-__")   )
-//&& (txtCep.getText().trim().equals("#####-###")   )
-//&& (txtCep.getText().trim().equals(txtCep)   )
-//&& (txtCep.getText().trim().equals(lblCep)   )
+//	&& (txtCep.getText().trim().equals(null)   )
+//	&& (txtCep.getText().trim().equals("")   )
+//	&& (txtCep.getText().trim().equals("-")   )
+//	&& (txtCep.getText().trim().equals("-")   )
+//	&& (txtCep.getText().trim().equals("__-__")   )
+//	&& (txtCep.getText().trim().equals("#####-###")   )
+//	&& (txtCep.getText().trim().equals(txtCep)   )
+//	&& (txtCep.getText().trim().equals(lblCep)   )
 
 //--- Não funciona

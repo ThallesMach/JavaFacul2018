@@ -147,18 +147,18 @@ public class ViewClienteTeste extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent event) {
 		// if( event.getSource()== btnOk ) {
 		// JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
-		//
 		// }
 		
 		if ((txtId.getText().trim().length() > 0) // trim() == Tirando espaços em branco com metodo 
 												// e length() == Verifica se tem componente preenchido
 				&& (txtNome.getText().trim().length() > 0) 
-				&& (txtLogradouro.getText().trim().length() > 0)
-				&& (txtNumero.getText().trim().length() > 0) 
-				&& (txtComplemento.getText().trim().length() > 0)
+//				&& (txtLogradouro.getText().trim().length() > 0)
+//				&& (txtNumero.getText().trim().length() > 0) 
+//				&& (txtComplemento.getText().trim().length() > 0)
 
-//				&& (txtCep.getText().trim().length() > 0 ) 
+				&& (txtCep.getText().trim().length() > 0 ) 
 //                && (txtCpf.getText().trim().length() > 0)
+				
 				&& ( event.getSource()== btnOk ) ) {
 			JOptionPane.showMessageDialog(null, "Cliente Cadastrado!", "Done", JOptionPane.INFORMATION_MESSAGE);
 		} else {

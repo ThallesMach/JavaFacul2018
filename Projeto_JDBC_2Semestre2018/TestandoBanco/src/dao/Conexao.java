@@ -1,10 +1,11 @@
 package dao;
-/*Essa classe ser· usada para manipularmos nossa conex„o com o banco de dados!
- * Nela faremos a conex„o
- * O envio de instruÁıes que modificam os dados de uma tabela
- * O envio de instruÁıes que retornam dados de uma tabela
+/*Essa classe ser√° usada para manipularmos nossa conex√£o com o banco de dados!
+ * Nela faremos a conex√£o
+ * O envio de instru√ß√µes que modificam os dados de uma tabela
+ * O envio de instru√ß√µes que retornam dados de uma tabela
  * */
 
+//teste no git
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,24 +33,24 @@ public class Conexao {
 		 * */
 		
 		// String de Connection
-		// String de connection Aguarda os Paramento para coneÁ„o
+		// String de connection Aguarda os Paramento para cone√ß√£o
 		String url= "jdbc:oracle:thin:@"+servidor+":"+porta+":orcl";
 		
 		/*Como uma atividade que envolve manipular o banco pode 
-		 * retornar uma ExeÁ„o, vamos usar o bloco try, que TENTA
+		 * retornar uma Exe√ß√£o, vamos usar o bloco try, que TENTA
 		 * executar algo.
-		 * Caso a execuÁ„o dÍ erro, o programa N„o Trava. O Bloco catch È
+		 * Caso a execu√ß√£o d√™ erro, o programa N√£o Trava. O Bloco catch √©
 		 * executado.
 		 * */
 		try { 
-			/*Essa Linha abaixo regista o Driver que faz a comunicaÁ„o do Oracle
+			/*Essa Linha abaixo regista o Driver que faz a comunica√ß√£o do Oracle
 			 * Mas ela so Funciona se add o Arquivo do Driver JDBC (ojdbc6.jar) 
 			 * ao Build Path do projeto
 			 * */ 
 			DriverManager.registerDriver(new oracle.jdbc.OracleDriver() );
 			
-			/*… a linha abaixo que efetivamente realiza a conex„o com o banco
-			 * Se ela for bem sucedida, a conex„o È aberta
+			/*√â a linha abaixo que efetivamente realiza a conex√£o com o banco
+			 * Se ela for bem sucedida, a conex√£o √© aberta
 			 * */
 			conexao = DriverManager.getConnection(url, usuario, senha);
 		}catch( SQLException erro){

@@ -8,12 +8,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import dao.Conexao;
 
-//Teste no Eclipse 13/09/2018_ás_20:32
+//--->>> Testando no Eclipse de Casa
 
 /* Essa é uma classe criada para representar um formulário que permita:
  * CONECTAR COM O BANCO DE DADOS
@@ -38,10 +39,6 @@ public class ViewTeste extends JFrame implements ActionListener{
 	private JButton btnExcluir;
 	
 	public ViewTeste() {
-		/*Abaixo temos a parte do c�digo que monta os objetos
-		 * dentro do formul�rio.
-		 * Esse conte�do foi abordado no 1� Semestre do curso
-		 */
 		painelFormulario = new JPanel(new GridLayout(2,4,3,3));
 		lblIdCliente = new JLabel("Id do cliente:");
 		txtIdCliente = new JTextField(10);
@@ -74,46 +71,77 @@ public class ViewTeste extends JFrame implements ActionListener{
 		add(painelBotoes, BorderLayout.SOUTH);
 	}
 	public static void main(String[] args) {
-		/*Os c�digos abaixo servem para exibir
-		 * o formul�rio que montamos, conforme estudado no primeiro semestre
-		 * */
+		// TODO Auto-generated method stub
 		ViewTeste janela = new ViewTeste();
 		janela.setSize(400,130);
 		janela.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		janela.show();
 	}
-	/*Os c�digos abaixo atribuem a��es espec�ficas para cada um dos bot�es
-	 * 
-	 * */
-	
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource()==btnGravar) {
 			/*Aqui vamos inserir o que vai ocorrer 
 			 * quando o bot�o GRAVAR for clicado*/
 			Conexao banquinho = new Conexao();
-			banquinho.abrirConexao();
-			
+			banquinho.abreConexao();
+			if(banquinho.inserir(txtNomeCliente.getText())) {
+				JOptionPane.showMessageDialog(null, "O Cliente foi inserido com sucesso!");
+			}else {
+				JOptionPane.showMessageDialog(null, "Ocorreu um erro durante a inser��o do cliente!");
+			}
+			banquinho.fechaConexao();
 			
 		}else {
 			if (event.getSource()==btnLer) {
 			/*Aqui vamos inserir o que vai ocorrer 
 			 * quando o bot�o LER for clicado*/
 				
+				if(txtIdCliente.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Insira um id para buscar o dado!");
+					
+				}else {
+					Conexao banquinho = new Conexao();
+					banquinho.abreConexao();
+					txtNomeCliente.setText(banquinho.buscar(Integer.parseInt(txtIdCliente.getText())));
+					banquinho.fechaConexao();
+				}
+				
 				
 			}else {
 				if (event.getSource()==btnAlterar) {
 			/*Aqui vamos inserir o que vai ocorrer 
 			 * quando o bot�o ALTERAR for clicado*/
-					
-					
-					
+					if(txtIdCliente.getText().isEmpty()) {
+						JOptionPane.showMessageDialog(null, "Insira um id para alterar o dado!");
+						
+					}else {
+						Conexao banquinho = new Conexao();
+						banquinho.abreConexao();
+						if(banquinho.alterar(Integer.parseInt(txtIdCliente.getText()), txtNomeCliente.getText())) {
+							JOptionPane.showMessageDialog(null, "O Cliente foi alterado com sucesso!");
+						}else {
+							JOptionPane.showMessageDialog(null, "Ocorreu um erro durante a altera��o do cliente!");
+						}
+						banquinho.fechaConexao();
+					}
 				}else {
 					if (event.getSource()==btnExcluir) {
 			/*Aqui vamos inserir o que vai ocorrer 
 			 * quando o bot�o EXCLUIR for clicado*/
 						
-						
+						if(txtIdCliente.getText().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "Insira um id para remover o dado!");
+							
+						}else {
+							Conexao banquinho = new Conexao();
+							banquinho.abreConexao();
+							if(banquinho.remover(Integer.parseInt(txtIdCliente.getText()))) {
+								JOptionPane.showMessageDialog(null, "O Cliente foi removido com sucesso!");
+							}else {
+								JOptionPane.showMessageDialog(null, "Ocorreu um erro durante a remo��o do cliente!");
+							}
+							banquinho.fechaConexao();
+						}
 						
 					}
 				}

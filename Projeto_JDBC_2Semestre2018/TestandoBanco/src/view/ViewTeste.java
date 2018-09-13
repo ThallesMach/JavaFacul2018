@@ -13,7 +13,9 @@ import javax.swing.JTextField;
 
 import dao.Conexao;
 
-/* Essa é uma classe criada para representar um formulário que permita:
+//Teste no Eclipse 13/09/2018
+
+/* Essa ï¿½ uma classe criada para representar um formulï¿½rio que permita:
  * CONECTAR COM O BANCO DE DADOS
  * GRAVAR DADOS EM UMA TABELA CHAMADA TESTE
  * LER UM DADO LIDO
@@ -36,9 +38,9 @@ public class ViewTeste extends JFrame implements ActionListener{
 	private JButton btnExcluir;
 	
 	public ViewTeste() {
-		/*Abaixo temos a parte do código que monta os objetos
-		 * dentro do formulário.
-		 * Esse conteúdo foi abordado no 1º Semestre do curso
+		/*Abaixo temos a parte do cï¿½digo que monta os objetos
+		 * dentro do formulï¿½rio.
+		 * Esse conteï¿½do foi abordado no 1ï¿½ Semestre do curso
 		 */
 		painelFormulario = new JPanel(new GridLayout(2,4,3,3));
 		lblIdCliente = new JLabel("Id do cliente:");
@@ -72,15 +74,15 @@ public class ViewTeste extends JFrame implements ActionListener{
 		add(painelBotoes, BorderLayout.SOUTH);
 	}
 	public static void main(String[] args) {
-		/*Os códigos abaixo servem para exibir
-		 * o formulário que montamos, conforme estudado no primeiro semestre
+		/*Os cï¿½digos abaixo servem para exibir
+		 * o formulï¿½rio que montamos, conforme estudado no primeiro semestre
 		 * */
 		ViewTeste janela = new ViewTeste();
 		janela.setSize(400,130);
 		janela.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		janela.show();
 	}
-	/*Os códigos abaixo atribuem ações específicas para cada um dos botões
+	/*Os cï¿½digos abaixo atribuem aï¿½ï¿½es especï¿½ficas para cada um dos botï¿½es
 	 * 
 	 * */
 	
@@ -88,7 +90,7 @@ public class ViewTeste extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource()==btnGravar) {
 			/*Aqui vamos inserir o que vai ocorrer 
-			 * quando o botão GRAVAR for clicado*/
+			 * quando o botï¿½o GRAVAR for clicado*/
 			Conexao banquinho = new Conexao();
 			banquinho.abrirConexao();
 			
@@ -96,20 +98,20 @@ public class ViewTeste extends JFrame implements ActionListener{
 		}else {
 			if (event.getSource()==btnLer) {
 			/*Aqui vamos inserir o que vai ocorrer 
-			 * quando o botão LER for clicado*/
+			 * quando o botï¿½o LER for clicado*/
 				
 				
 			}else {
 				if (event.getSource()==btnAlterar) {
 			/*Aqui vamos inserir o que vai ocorrer 
-			 * quando o botão ALTERAR for clicado*/
+			 * quando o botï¿½o ALTERAR for clicado*/
 					
 					
 					
 				}else {
 					if (event.getSource()==btnExcluir) {
 			/*Aqui vamos inserir o que vai ocorrer 
-			 * quando o botão EXCLUIR for clicado*/
+			 * quando o botï¿½o EXCLUIR for clicado*/
 						
 						
 						

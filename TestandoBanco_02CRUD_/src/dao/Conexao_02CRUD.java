@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Conexao {
+public class Conexao_02CRUD {
     /*Atributos básicos para a conexão com o banco
      * */
 	private String servidor;
@@ -15,9 +15,14 @@ public class Conexao {
     private String usuario;
     
     public Connection conexao;
+    
+    
+    /*A Classe Statement Não Trataos DADOS, portanto,
+     * deixa margem para SQL INJECTION
+     * */
     public Statement stm; //A classe Statement permite a execução de DDL ou DML
 
-    public Conexao(){
+    public Conexao_02CRUD(){
     	/*
     	 * No construtor, estou definindo os valores para a conexão
     	 * com o banco oracle da fiap.
@@ -28,6 +33,7 @@ public class Conexao {
         senha="SUA SENHA";
         usuario="SEU USUARIO";
     }
+    
    
    /*
     * O método abaixo é responsável por inserir um dado no banco de dados.

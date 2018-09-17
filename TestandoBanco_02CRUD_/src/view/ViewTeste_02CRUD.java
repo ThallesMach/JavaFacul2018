@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import dao.Conexao;
+import dao.Conexao_02CRUD;
 
 //--->>> Testando no Eclipse de Casa
 
@@ -25,7 +25,7 @@ import dao.Conexao;
  * 
  * Depois de entender como o Java se conecta com um banco e manipula seus dados, vamos aplicar os mesmos
  * conhecimentos no projeto Walduino*/
-public class ViewTeste extends JFrame implements ActionListener{
+public class ViewTeste_02CRUD extends JFrame implements ActionListener{
 	private JPanel painelFormulario;
 	private JLabel lblIdCliente;
 	private JTextField txtIdCliente;
@@ -38,7 +38,7 @@ public class ViewTeste extends JFrame implements ActionListener{
 	private JButton btnAlterar;
 	private JButton btnExcluir;
 	
-	public ViewTeste() {
+	public ViewTeste_02CRUD() {
 		painelFormulario = new JPanel(new GridLayout(2,4,3,3));
 		lblIdCliente = new JLabel("Id do cliente:");
 		txtIdCliente = new JTextField(10);
@@ -72,7 +72,7 @@ public class ViewTeste extends JFrame implements ActionListener{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ViewTeste janela = new ViewTeste();
+		ViewTeste_02CRUD janela = new ViewTeste_02CRUD();
 		janela.setSize(400,130);
 		janela.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		janela.show();
@@ -82,7 +82,7 @@ public class ViewTeste extends JFrame implements ActionListener{
 		if (event.getSource()==btnGravar) {
 			/*Aqui vamos inserir o que vai ocorrer 
 			 * quando o bot�o GRAVAR for clicado*/
-			Conexao banquinho = new Conexao();
+			Conexao_02CRUD banquinho = new Conexao_02CRUD();
 			banquinho.abreConexao();
 			if(banquinho.inserir(txtNomeCliente.getText())) {
 				JOptionPane.showMessageDialog(null, "O Cliente foi inserido com sucesso!");
@@ -100,7 +100,7 @@ public class ViewTeste extends JFrame implements ActionListener{
 					JOptionPane.showMessageDialog(null, "Insira um id para buscar o dado!");
 					
 				}else {
-					Conexao banquinho = new Conexao();
+					Conexao_02CRUD banquinho = new Conexao_02CRUD();
 					banquinho.abreConexao();
 					txtNomeCliente.setText(banquinho.buscar(Integer.parseInt(txtIdCliente.getText())));
 					banquinho.fechaConexao();
@@ -115,7 +115,7 @@ public class ViewTeste extends JFrame implements ActionListener{
 						JOptionPane.showMessageDialog(null, "Insira um id para alterar o dado!");
 						
 					}else {
-						Conexao banquinho = new Conexao();
+						Conexao_02CRUD banquinho = new Conexao_02CRUD();
 						banquinho.abreConexao();
 						if(banquinho.alterar(Integer.parseInt(txtIdCliente.getText()), txtNomeCliente.getText())) {
 							JOptionPane.showMessageDialog(null, "O Cliente foi alterado com sucesso!");
@@ -133,7 +133,7 @@ public class ViewTeste extends JFrame implements ActionListener{
 							JOptionPane.showMessageDialog(null, "Insira um id para remover o dado!");
 							
 						}else {
-							Conexao banquinho = new Conexao();
+							Conexao_02CRUD banquinho = new Conexao_02CRUD();
 							banquinho.abreConexao();
 							if(banquinho.remover(Integer.parseInt(txtIdCliente.getText()))) {
 								JOptionPane.showMessageDialog(null, "O Cliente foi removido com sucesso!");

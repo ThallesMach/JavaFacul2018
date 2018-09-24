@@ -2,13 +2,11 @@
 
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -17,6 +15,7 @@ import javax.swing.JTextField;
 
 import dao.Conexao;
 
+/*  acee' or '1'='1 */
 
 public class ViewLoginVulneravel extends JFrame implements ActionListener{
 	private JTextField txtNomeUsuario;
@@ -45,7 +44,7 @@ public class ViewLoginVulneravel extends JFrame implements ActionListener{
 		if(event.getSource()==btnLogin) {
 			Conexao banco = new Conexao();
 			banco.abreConexao();
-			if(banco.loginVulneravel(txtNomeUsuario.getText())) {
+			if(banco.login(txtNomeUsuario.getText())) {
 				ViewTeste janela = new ViewTeste();
 				janela.setSize(400,130);
 				janela.setDefaultCloseOperation(EXIT_ON_CLOSE);

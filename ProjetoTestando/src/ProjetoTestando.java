@@ -9,6 +9,10 @@ public class ProjetoTestando {
 		
 		System.out.println("Testando no Novo -->> Eclipse Photon <<-- ");
 		//Teste recebido no Github
+		System.out.println("----------------------------------------------");
+		System.out.println("Testando no Novo -->> Version: 2021-03 (4.19.0) <<-- ");
+		// 10/05/2021
+		
 	}
 
 }
